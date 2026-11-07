@@ -5,13 +5,6 @@ Web aplikacija koja na temelju koncentracija onečišćujućih tvari (CO, NO₂,
 Projekt iz kolegija RUAP, FERIT Osijek.
 Autor: Anto Kožarević
 
-## Kako radi
-
-```
-preglednik (HTML/JS)  ──POST /predict──►  FastAPI poslužitelj  ──►  Azure ML endpoint (regresijski model)
-        ▲                                        │                          │
-        └─────────── AQI + kategorija ◄──────────┴────── "Scored Labels" ◄──┘
-```
 
 1. Korisnik unosi datum, grad (Brasilia, Cairo, Dubai, London, New York, Sydney) i vrijednosti onečišćivača.
 2. Poslužitelj prosljeđuje podatke Azure ML servisu. Ključ i adresa servisa čitaju se iz `.env` i nikad ne dolaze do preglednika.
